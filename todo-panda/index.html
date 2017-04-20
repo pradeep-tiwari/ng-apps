@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!-- Specify AngualrJS main application directive -->
+<html ng-app="todoApp">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>ToDo Panda: AngualrJS based todo app.</title>
+        
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+        <link rel="stylesheet" href="styles/ionicons/ionicons.min.css">
+        <link rel="stylesheet" href="styles/bricks.css">
+        <link rel="stylesheet" href="styles/custom.css">
+    </head>
+    <body ng-controller="ToDoCtrl">
+        <header>
+            <div class="wrapper max-wrap660">
+                <h1>
+                    <i class="ion-ios-compose-outline"></i> ToDo-Panda
+                </h1>
+                <form ng-submit="addToDo(todoTitle)">
+                    <input type="text" ng-model="todoTitle" placeholder="What you want to do today?">
+                </form>
+            </div>
+        </header>
+        
+        <div class="wrapper max-wrap660">
+            <ul id="todoStatusBar">
+                <li>
+                    <span><span class="itemsLeft">{{ todos.left() }}</span> item(s) left</span>
+                </li>
+                <li class="filter">
+                    <label class="filterLabel" ng-class="shouldSetLabelActive('all', filter)">
+                        All <input type="radio" name="filter" value="all" ng-model="filter">
+                    </label>
+                    <label class="filterLabel" ng-class="shouldSetLabelActive('active', filter)">
+                        Active <input type="radio" name="filter" value="active" ng-model="filter">
+                    </label>
+                    <label class="filterLabel"  ng-class="shouldSetLabelActive('completed', filter)">
+                        Completed <input type="radio" name="filter" value="completed" ng-model="filter">
+                    </label>
+                </li>
+                <li class="txt-right">
+                    <span class="filterLabel" ng-click="clearCompleted()">Clear Completed</span>
+                </li>
+            </ul>
+            
+            
+            <ul id="todoList">
+                <li ng-repeat="item in todos.items | checkedTodos: filter">
+                    <span class="todoCheckBtn" ng-click="shouldMarkAsCompleted(item.id)">
+                        <i class="ion-checkmark" ng-hide="isComplete(item.id)"></i>
+                    </span>
+                    <span class="todoText" ng-class="shouldUnderline(item.completed)">
+                        {{ item.title }}
+                    </span>
+                    <span class="todoDelete" ng-click="removeToDo(item.id)">&times;</span>
+                </li>
+            </ul>
+        </div>
+        
+        <!--<script type="text/x-template" id="todoListTemplate">
+            <li data-todo-id="{{= it.todo.id }}" data-checked="false">
+                <span class="todoCheckBtn" data-type="completed-btn">
+                    <i class="ion-checkmark {{? !it.todo.completed }}hide{{?}}"></i>
+                </span>
+                <span class="todoText {{? it.todo.completed }}todoLineThrough{{?}}">
+                    {{= it.todo.title }}
+                </span>
+                <span class="todoDelete" data-type="delete-btn">&times;</span>
+            </li>
+        </script>-->
+        
+        <!-- Load scripts -->
+        <script src="scripts/lib/angular.js"></script>
+        <script src="scripts/services/mockData.js"></script>
+        <script src="scripts/app.js"></script>
+        <script src="scripts/filters/filters.js"></script>
+        <script src="scripts/controllers/ToDoCtrl.js"></script>
+    </body>
+</html>
