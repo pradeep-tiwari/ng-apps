@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!-- Specify AngualrJS main application directive -->
+<html ng-app="books">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>Books: Because You Need One!</title>
+        
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+        <link rel="stylesheet" href="styles/ionicons/ionicons.min.css">
+        <link rel="stylesheet" href="styles/bricks.css">
+        <link rel="stylesheet" href="styles/custom.css">
+    </head>
+    <body ng-controller="BooksCtrl">
+        
+        <!-- Yep, this is our SPA shell -->
+        <ng-view />
+        
+        <!-- Load scripts -->
+        <script src="scripts/fakeModel.js"></script>
+        <script src="scripts/lib/angular.js"></script>
+        <script src="scripts/lib/ngmodules/angular-route.js"></script>
+        <script src="scripts/app.js"></script>
+        <script src="scripts/routes.js"></script>
+        <script src="scripts/filters/customFilters.js"></script>
+        <script src="scripts/controllers/booksCtrl.js"></script>
+        <script src="scripts/controllers/checkoutCtrl.js"></script>
+        <script src="scripts/controllers/ordersCtrl.js"></script>
+        <script src="scripts/components/cart.js"></script>
+    </body>
+</html>

@@ -1,0 +1,6 @@
+<a class="btn"
+   ng-repeat="page in data.products | filter:categoryFilterFn | pageCount:pageSize"
+    ng-click="selectPage($index + 1)"
+    ng-class="getPageClass($index + 1)">
+            {{ $index + 1 }}
+</a>

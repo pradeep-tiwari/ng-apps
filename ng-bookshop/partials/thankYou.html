@@ -1,0 +1,14 @@
+<div id="thankYou" class="wrapper">
+    <div class="alert alert-danger" ng-show="data.orderError">
+        Error ({{ data.orderError.status }}). The order could not be placed.
+        <a href="#/placeholder">Click here to try again.</a>
+    </div>
+    
+    <div ng-hide="data.orderError">
+        <h5>Thanks!</h5>
+        <p>
+            Thanks for placing your order. Your order id: <b>{{ data.orderId }}</b>
+        </p>
+        <a href="#/" class="btn btn-green">Shop More</a>
+    </div>
+</div>

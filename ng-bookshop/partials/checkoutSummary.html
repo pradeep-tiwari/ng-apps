@@ -1,0 +1,38 @@
+<section class="wrapper maxWrap760" ng-controller="CheckoutCtrl">
+    <table class="full-width">
+        <caption><h5>Your Cart</h5></caption>
+        <tbody>
+            <tr>
+                <th>Quantity</th>
+                <th>Item</th>
+                <th>Price</th>
+                <th>Subtotal</th>
+                <th>&nbsp;</th>
+            </tr>
+            <tr ng-repeat="item in cartData">
+                <td>{{ item.count }}</td>
+                <td>{{ item.title }}</td>
+                <td>{{ item.price | currency }}</td>
+                <td>{{ (item.price * item.count) | currency }}</td>
+                <td>
+                    <button class="btn btn-red" ng-click="remove(item.id)">
+                        <i class="ion-trash-b"></i>
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <th>Total</th>
+                <th>{{ total() | currency }}</th>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td colspan="5" class="txt-center">
+                    <a href="#/" class="btn btn-blue">Continue Shopping</a>
+                    <a href="#/placeorder" class="btn btn-green">Checkout Now</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>

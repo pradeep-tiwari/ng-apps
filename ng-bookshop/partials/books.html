@@ -1,0 +1,11 @@
+<div class="row">
+    <div class="col m12 l2 item" ng-repeat="item in data.products | filter:categoryFilterFn | range:selectedPage:pageSize">
+        <h2>{{ item.title }}</h2>
+        <div class="img"></div>
+        <div class="">
+            <button class="btn btn-blue" ng-click="addProductToCart(item)">
+                <span class="ion-android-cart"></span> ${{ item.price }}
+            </button>
+        </div>
+    </div>
+</div>

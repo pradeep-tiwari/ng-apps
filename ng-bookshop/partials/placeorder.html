@@ -1,0 +1,62 @@
+<form name="shippingForm" class="wrapper maxWrap760" ng-controller="OrdersCtrl" novalidate>
+    <table class="full-width">
+        <caption><h5>Checkout Now</h5></caption>
+        <tbody>
+            <tr>
+                <th>Ship To</th>
+                <td>
+                    <input type="text" name="name" class="full-width" placeholder="Name" ng-model="data.shipping.name" required>
+                    <span class="error" ng-show="shippingForm.name.$error.required">Please enter a name</span>
+                </td>
+            </tr>
+            <tr>
+                <th>Address</th>
+                <td>
+                    <input type="text" name="address" class="full-width" placeholder="Street Address" ng-model="data.shipping.address" required>
+                    <span class="error" ng-show="shippingForm.address.$error.required">Please enter a street address</span>
+                </td>
+            </tr>
+            <tr>
+                <th>City</th>
+                <td>
+                    <input type="text" name="city" class="full-width" placeholder="City Name" ng-model="data.shipping.city" required>
+                    <span class="error" ng-show="shippingForm.city.$error.required">Please enter a city</span>
+                </td>
+            </tr>
+            <tr>
+                <th>State</th>
+                <td>
+                    <input type="text" name="state" class="full-width" placeholder="State Name" ng-model="data.shipping.state" required>
+                    <span class="error" ng-show="shippingForm.state.$error.required">Please enter a state</span>
+                </td>
+            </tr>
+            <tr>
+                <th>Zip</th>
+                <td>
+                    <input type="text" name="zip" class="full-width" placeholder="ZipCode Number" ng-model="data.shipping.zip" required>
+                    <span class="error" ng-show="shippingForm.zip.$error.required">Please enter a zip code</span>
+                </td>
+            </tr>
+            <tr>
+                <th>Country</th>
+                <td>
+                    <input type="text" name="country" class="full-width" placeholder="Country Name" ng-model="data.shipping.country" required>
+                    <span class="error" ng-show="shippingForm.country.$error.required">Please enter a street address</span>
+                </td>
+            </tr>
+            <tr>
+                <th>Options</th>
+                <td>
+                    <label class="weight-normal">
+                    <input type="checkbox" name="giftwrap" placeholder="Street Address" ng-model="data.shipping.giftwrap">
+                    Gift wrap your items</label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="txt-center">
+                    <button class="btn btn-green" ng-disabled="shippingForm.$invalid" ng-click="sendOrder(data.shipping)">Complete Order</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</form>

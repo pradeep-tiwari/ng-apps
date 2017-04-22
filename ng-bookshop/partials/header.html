@@ -1,0 +1,13 @@
+<div class="row">
+    <div class="col m12 l4">
+        <a ng-click="selectCategory('')">BOOKS</a>
+    </div>
+    <div class="col m12 l8 nav">
+        <a ng-repeat="item in data.products | unique:'category' | orderBy:'category'"
+            ng-click="selectCategory(item)" ng-class="getCategoryClass(item)"
+            ng-class="getCategoryClass(item)">
+            {{ item }}
+        </a>
+        <cart-summary />
+    </div>
+</div>

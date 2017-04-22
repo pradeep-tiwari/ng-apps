@@ -1,0 +1,125 @@
+/* --------------------- OVERRIDE -------------------- */
+
+.maxWrap760 {
+    max-width: 760px;
+}
+
+/* --------------------- HEADER ---------------------- */
+
+header {
+    color: #fff;
+    height: 6rem;    
+    padding: 0 1.5rem;
+    line-height: 6rem;
+    background-color: #333;
+    border-bottom: 2px solid #aa1e1e;
+}
+header a:hover {
+    cursor: pointer;
+}
+.nav .active {
+    color: #fff;
+}
+.nav {
+    text-align: right;
+}
+.nav a {
+    color: #ccc;
+    padding: 0 1rem;
+}
+.nav a.cart {
+    background: #6b6b6b;
+    padding: 1rem;
+}
+.nav a .cart-text, .nav a .cart-count {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+.nav a .cart-count {
+    padding: 0.3rem 0.6rem;
+    background: #646464;
+    border-radius: 2px;
+}
+
+/* ---------------------- SECTION -------------------- */
+
+section {
+    padding-top: 5rem
+}
+.alert {
+    margin-top: 3rem;
+    padding: 1rem;
+    border-radius: 3px;
+    max-width: 760px;
+    font-weight: 700;
+}
+.alert-danger {
+    color: #cd5c5c;
+    background-color: #fff7f7;
+    border: 1px solid #cd5c5c;
+}
+.alert-warning {
+    color: #746f42;
+    background-color: #fff1c8;
+    border: 1px solid #FF9800;
+}
+.item {
+    margin-bottom: 3rem;
+}
+.item h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+.item .img {
+    width: 100%;
+    height: 120px;
+    background-color: #f0f0f0;
+}
+.item .btn {
+    width: 100%;
+}
+
+/* ---------------- FORM VALIDATIONS ----------------- */
+
+input.ng-invalid {
+    border: 1px solid #cd5c5c;
+}
+input.ng-valid {
+    border: 1px solid #009688;
+}
+input.ng-invalid:focus {
+    border: 1px solid #cd5c5c;
+}
+input.ng-valid:focus {
+    border: 1px solid #009688;
+}
+span.error {
+    color: #e11414;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+label.weight-normal {
+    font-weight: 400;
+}
+button[disabled] {
+    background-color: #8BC34A;
+}
+button[disabled]:hover {
+    background-color: #8BC34A;
+}
+
+/* ---------------------- THANKS --------------------- */
+
+#thankYou {
+    background: #F0F0F0;
+    max-width: 530px;
+    padding: 3rem;
+}
+
+
+/* ---------------------- FOOTER --------------------- */
+
+footer {
+    height: 8rem;
+    line-height: 8rem;
+}
