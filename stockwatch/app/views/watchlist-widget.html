@@ -1,0 +1,17 @@
+<div class="widget box-shadow" ng-controller="WatchlistController">
+    <div class="head">
+        Watchlists
+        <a href="#/add-watchlist"><i class="ion-ios-plus"></i></a>
+    </div>
+    <ul>
+        <li ng-repeat="watchlist in watchlists track by watchlist.nextId">
+            <a href="#/watchlists/{{ watchlist.nextId }}">
+                {{ watchlist.name }}
+            </a>
+            <i class="ion-trash-b remove" ng-click="deleteList(watchlist)"></i>
+        </li>
+        <li ng-if="!watchlists.length" class="txt-center">
+            Click <i class="ion-ios-plus"></i> icon to create a watchlist.
+        </li>
+    </ul>
+</div>

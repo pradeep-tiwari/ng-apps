@@ -1,0 +1,93 @@
+[
+  {
+    "label": "TRTLU - Terrapin 3 Acquisition Corporation",
+    "name": "Terrapin 3 Acquisition Corporation",
+    "symbol": "TRTLU",
+    "sector": "Finance",
+    "industry": "Business Services"
+  },
+  {
+    "label": "TRTLW - Terrapin 3 Acquisition Corporation",
+    "name": "Terrapin 3 Acquisition Corporation",
+    "symbol": "TRTLW",
+    "sector": "n/a",
+    "industry": "n/a"
+  },
+  {
+    "label": "TBNK - Territorial Bancorp Inc.",
+    "name": "Territorial Bancorp Inc.",
+    "symbol": "TBNK",
+    "sector": "Finance",
+    "industry": "Savings Institutions"
+  },
+  {
+    "label": "TSRO - TESARO, Inc.",
+    "name": "TESARO, Inc.",
+    "symbol": "TSRO",
+    "sector": "Health Care",
+    "industry": "Major Pharmaceuticals"
+  },
+  {
+    "label": "TESO - Tesco Corporation",
+    "name": "Tesco Corporation",
+    "symbol": "TESO",
+    "sector": "Energy",
+    "industry": "Metal Fabrications"
+  },
+  {
+    "label": "TSLA - Tesla Motors, Inc.",
+    "name": "Tesla Motors, Inc.",
+    "symbol": "TSLA",
+    "sector": "Capital Goods",
+    "industry": "Auto Manufacturing"
+  },
+  {
+    "label": "TESS - TESSCO Technologies Incorporated",
+    "name": "TESSCO Technologies Incorporated",
+    "symbol": "TESS",
+    "sector": "Consumer Non-Durables",
+    "industry": "Electronic Components"
+  },
+  {
+    "label": "TSRA - Tessera Technologies, Inc.",
+    "name": "Tessera Technologies, Inc.",
+    "symbol": "TSRA",
+    "sector": "Technology",
+    "industry": "Semiconductors"
+  },
+  {
+    "label": "TTEK - Tetra Tech, Inc.",
+    "name": "Tetra Tech, Inc.",
+    "symbol": "TTEK",
+    "sector": "Consumer Services",
+    "industry": "Military/Government/Technical"
+  },
+  {
+    "label": "TLOG - TetraLogic Pharmaceuticals Corporation",
+    "name": "TetraLogic Pharmaceuticals Corporation",
+    "symbol": "TLOG",
+    "sector": "Health Care",
+    "industry": "Major Pharmaceuticals"
+  },
+  {
+    "label": "TTPH - Tetraphase Pharmaceuticals, Inc.",
+    "name": "Tetraphase Pharmaceuticals, Inc.",
+    "symbol": "TTPH",
+    "sector": "Health Care",
+    "industry": "Major Pharmaceuticals"
+  },
+  {
+    "label": "TCBI - Texas Capital Bancshares, Inc.",
+    "name": "Texas Capital Bancshares, Inc.",
+    "symbol": "TCBI",
+    "sector": "Finance",
+    "industry": "Major Banks"
+  },
+  {
+    "label": "TCBIL - Texas Capital Bancshares, Inc.",
+    "name": "Texas Capital Bancshares, Inc.",
+    "symbol": "TCBIL",
+    "sector": "Finance",
+    "industry": "Major Banks"
+  }
+]

@@ -1,0 +1,55 @@
+<div class="widget box-shadow" ng-controller="WatchlistController">
+    <div class="head">
+        Hot Tech Stocks
+        <a href="#/watchlists/{{ currentWatchlistId }}/add-stocks"><i class="ion-ios-plus"></i></a>
+    </div>
+    
+    <div ng-hide="stocks.length">
+        <br>
+        <p class="txt-center">
+            Whoops!! You have no stocks created.
+        </p>
+    </div>
+    
+    <table ng-show="stocks.length" class="full-width">
+        <tbody>
+            <tr>
+                <th>Symbol</th>
+                <th>Shares Owned</th>
+                <th>Last Price</th>
+                <th>Price Change($ | %)</th>
+                <th>Market Value</th>
+                <th>Day Change</th>
+                <th>&nbsp;</th>
+            </tr>
+            <tr class="green-bg" ng-repeat="stock in stocks track by $index">
+                <td>{{ stock.symbol }}</td>
+                <td>{{ stock.shares }}</td>
+                <td><span class="green-label">$44.11</span></td>
+                <td><span class="green-text">+0.6844</span></td>
+                <td>$4451.00</td>
+                <td><span class="green-text">$11.68</span></td>
+                <td class="txt-right"><i class="ion-trash-b remove"></i></td>
+            </tr>
+            <tr class="red-bg">
+                <td>MSFT</td>
+                <td>100</td>
+                <td><span class="red-label">$44.11</span></td>
+                <td><span class="red-text">+0.6844</span></td>
+                <td>$4451.00</td>
+                <td><span class="red-text">$11.68</span></td>
+                <td class="txt-right"><i class="ion-trash-b remove"></i></td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>Totals</th>
+                <th>700</th>
+                <th>&nbsp;</th>
+                <th>&nbsp;</th>
+                <th>$140,234.78</th>
+                <th>$917.52</th>
+            </tr>
+        </tfoot>
+    </table>            
+</div>

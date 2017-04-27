@@ -1,0 +1,28 @@
+<div class="row" ng-controller="WatchlistController">
+    <div class="col m4 l3">
+        <span class="logo">StockDog</span>
+    </div>
+    <div class="col m12 l6 txt-center blurb">
+        <span>Real-Time Stock Watchlist Monitoring & Management Application.</span>
+    </div>
+    <div class="col m8 l3 txt-right">
+        <a href="#/dashboard" class="btn" ng-class="{active: activeScreen === 'dashboard'}">
+            Dashboard
+        </a>
+        
+        <div class="dropdown">
+            <a class="btn" ng-class="{active: activeScreen === 'watchlists'}">
+                Watchlists <i class="ion-android-arrow-dropdown"></i>
+            </a>
+            <div class="dropdown-content">
+                <a ng-if="!watchlists.length">
+                    Empty List
+                </a>
+                
+                <a ng-repeat="watchlist in watchlists track by watchlist.nextId" href="#/watchlists/{{ watchlist.nextId }}">
+                    {{ watchlist.name }}
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

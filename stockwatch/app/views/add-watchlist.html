@@ -1,0 +1,45 @@
+<div class="widget box-shadow" ng-controller="WatchlistController">
+    <div class="head">
+        Create New Watchlist
+        <i class="ion-android-cancel" ng-click="$back()"></i>
+    </div>
+    
+    <form name="listForm">
+        <table class="full-width no-bottom-border">
+            <tbody>
+                <tr>
+                    <td><b>Name</b></td>
+                    <td>
+                        <input type="text"
+                               name="name"
+                               class="full-width"
+                               placeholder="Name this watchlist"
+                               maxlength="25"
+                               autocomplete="off"
+                               ng-model="watchlist.name"
+                               required>
+                    </td>
+                </tr>
+                <tr>
+                    <td><b>Description</b></td>
+                    <td>
+                        <input type="text"
+                               name="description"
+                               class="full-width"
+                               placeholder="Briefly describe this watchlist"
+                               maxlength="40"
+                               autocomplete="off"
+                               ng-model="watchlist.description"
+                               required>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="txt-right">
+                        <button type="submit" class="btn btn-green" ng-disabled="listForm.$invalid" ng-click="createList()">Create</button>
+                        <button type="button" class="btn btn-red" ng-click="$back()">Cancel</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</div>

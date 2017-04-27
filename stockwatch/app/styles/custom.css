@@ -1,0 +1,177 @@
+.box-shadow {
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .03),
+                0 1px 4px 0 rgba(0, 0, 0, .048),
+                0 3px 1px -2px rgba(0, 0, 0, .12)
+}
+
+/* ----------------------- Header -------------------- */
+header {
+    font-size: 1.6rem;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid #ccc;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .03),
+                0 1px 4px 0 rgba(0, 0, 0, .048),
+                0 3px 1px -2px rgba(0, 0, 0, .12)
+}
+header span {
+    font-weight: 100;
+    letter-spacing: -.05rem;
+    vertical-align: sub;
+}
+header span.logo {
+    font-weight: 400;
+    text-transform: uppercase;
+}
+header .btn {
+    font-weight: 400;
+    font-size: 1.1rem;
+    background-color: #b3b3b3;
+    color: #fff;
+    height: 3rem;
+    line-height: 3rem;
+    padding: 0 1rem;
+    text-transform: uppercase;
+}
+header .btn.active {
+    background-color: #0063b1;
+}
+header .btn:hover {
+    background-color: #b3b3b3;
+}
+header .btn.active:hover {
+    background-color: #0063b1;
+}
+header .btn i {
+    vertical-align: middle;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 100%;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a {
+    color: black;
+    padding: 0.3rem 1rem;
+    font-size: 1.3rem;
+    text-align: left;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover {
+    background-color: #f1f1f1
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* ----------------------- Widget -------------------- */
+.container {
+    padding-top: 2rem;
+}
+.widget {
+    border: 1px solid #ccc;
+}
+.widget tfoot th {
+    border-bottom-width: 0;
+}
+.widget ul {
+    list-style: none;
+    margin-bottom: 0;
+    padding: 1.5rem
+}
+.widget ul li {
+    position: relative;
+}
+.widget ul li a {
+    color: #000;
+}
+.widget div.head {
+    position: relative;
+    background-color: #f0f0f0;
+    color: #000000;
+    padding: 1.2rem;
+    padding-left: 1.5rem;
+}
+.widget div.head a {
+    color: #000;
+}
+.widget div.head i {
+    position: absolute;
+    right: 1.5rem;
+}
+.widget div.head i:hover {
+    cursor: pointer;
+}
+.widget li i.remove {
+    position: absolute;
+    right: 0;
+}
+.widget i.remove {
+    color: #909090;
+}
+.widget i.remove:hover {
+    cursor: pointer;
+    color: #000;
+}
+.widget .tile {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+.widget .tile .infoTile {
+    background-color: green;
+}
+.widget .chartContainer {
+    padding: 10rem;
+}
+.widget .green-bg {
+    background-color: #f1fff1;
+}
+.widget .green-label {
+    background: #109e15;
+    color: #fff;
+    padding: 0.3rem 0.5rem;
+    border-radius: 2px;
+}
+.widget .green-text {
+    color: #109e15;
+    font-weight: 700;
+}
+.widget .red-bg {
+    background-color: #fff4f4;
+}
+.widget .red-label {
+    background: #cd5c5c;
+    color: #fff;
+    padding: 0.3rem 0.5rem;
+    border-radius: 2px;
+}
+.widget .red-text {
+    color: #cd5c5c;
+    font-weight: 700;
+}
+.widget table.no-bottom-border td {
+    border-bottom-width: 0;
+}
+
+/* ---------------- Common Behaviors ----------------- */
+button[disabled] {
+    background-color: #b9b9b9;
+    transition: background-color ease 0.3s;
+}
+button[disabled]:hover {
+    background-color: #b9b9b9;
+}
+/* --------------- Mobile Adjustments ---------------- */
+@media screen and (max-width: 768px) {
+    header div.blurb {
+        display: none;
+    }    
+}
