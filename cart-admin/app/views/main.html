@@ -1,0 +1,20 @@
+<div ng-controller="AdminController">
+    <header>
+        <div class="wrapper row">
+            <div class="col m12 l3 logo">
+                <a class="btn">CART-ADMIN</a>
+            </div>
+            <div class="col m12 l9 nav txt-right">
+                <span ng-repeat="screen in screens">
+                    <a class="btn" ng-class="{'btn-active': screen == current}" ng-click="setScreen($index)">
+                         {{ screen }}
+                    </a>
+                </span>
+            </div>
+        </div>
+    </header>
+    
+    <div class="wrapper row">
+        <div ng-include="getScreen()" />
+    </div>    
+<div>

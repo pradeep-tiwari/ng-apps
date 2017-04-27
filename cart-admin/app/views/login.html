@@ -1,0 +1,24 @@
+<div ng-controller="authController">
+    
+    <form name="authForm" class="wrapper" novalidate>
+        <div class="field">
+            <label>Username</label> <br>
+            <input type="text" name="username" class="full-width" ng-model="username" autocomplete="off" required> <br>
+            <span class="error" ng-show="authForm.username.$error.required">Required</span>
+        </div>
+        
+        <div class="field">
+            <label>Password</label> <br>
+            <input type="password" name="password" class="full-width" ng-model="password" required> <br>
+            <span class="error" ng-show="authForm.password.$error.required">Required</span>
+        </div>
+        
+        <div class="field">
+            <button class="btn btn-green" ng-disabled="authForm.$invalid" ng-click="authenticate(username, password)">Login</button>
+            <span class="error" ng-show="authenticationError">
+                Authentication Failed ({{ authenticationError.status }})
+            </span>
+        </div>
+    </form>
+    
+</div>   

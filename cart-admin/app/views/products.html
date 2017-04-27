@@ -1,0 +1,57 @@
+<div id="products" class="wrapper row" ng-controller="ProductsController">
+    
+    <div class="col m12">
+        <table class="full-width">
+            <tbody>
+                <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Category</th>
+                    <th>Price</th>
+                    <th></th>
+                </tr>
+                <tr ng-repeat="product in products" ng-hide="product.id === editedProduct.id">
+                    <td>{{ product.title }}</td>
+                    <td>{{ product.description }}</td>
+                    <td>{{ product.category }}</td>
+                    <td>{{ product.price | currency }}</td>
+                    <td>
+                        <button class="btn" ng-click="startEdit(product)">
+                            Edit
+                        </button>
+                        <button class="btn" ng-click="deleteProduct(product)">
+                            Delete
+                        </button>
+                    </td>
+                </tr>
+                <tr ng-class="{danger: editedProduct}">
+                    <th><input type="text" ng-model="editedProduct.title" required></th>
+                    <th><input type="text" ng-model="editedProduct.description" required></th>
+                    <th><input type="text" ng-model="editedProduct.category" required></th>
+                    <th><input type="text" ng-model="editedProduct.price" required></th>
+                    <td>
+                        <button
+                            class="btn"
+                            ng-hide="editedProduct.id"
+                            ng-click="createProduct(editedProduct)">
+                                Create
+                        </button>
+                        <button
+                            class="btn"
+                            ng-show="editedProduct.id"
+                            ng-click="updateProduct(editedProduct)">
+                                Save
+                        </button>
+                        <button
+                            class="btn"
+                            ng-show="editedProduct.id"
+                            ng-click="cancelEdit(editedProduct)">
+                                Cancel
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+</div>

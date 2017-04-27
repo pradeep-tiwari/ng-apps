@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="cartAdmin">
+    <head>
+        <meta charset=utf-8>
+        <title>CartAdmin: Manage Your Shop & Keep Calm!</title>
+        <meta name=viewport content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" href="css/ionicons/ionicons.min.css">
+        <link rel="stylesheet" href="css/bricks.css">
+        <link rel="stylesheet" href="css/custom.css">
+        <script src="app/lib/angular.js"></script>
+        <script src="app/lib/angular-route.js"></script>
+        <script src="app/lib/angular-resource.js"></script>
+        <script src="app.js"></script>
+        <script src="app/controllers/authController.js"></script>
+        <script src="app/controllers/adminController.js"></script>
+        <script src="app/controllers/ordersController.js"></script>
+        <script src="app/controllers/productsController.js"></script>
+    </head>
+    
+    <body>
+        <!-- SPA Shell -->
+        <ng-view />
+    </body>
+</html>

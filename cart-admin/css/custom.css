@@ -1,0 +1,65 @@
+/* --------------------- Login Form ------------------ */
+form[name=authForm] {
+    background: #f0f0f0;
+    max-width: 400px;
+    padding: 3rem;
+}
+form[name=authForm] .field {
+    margin-bottom: 2rem;
+}
+form[name=authForm] input:focus {
+    background: #fff;
+}
+form[name=authForm] span.error {
+    color: #cd5c5c;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+form[name=authForm] button[disabled] {
+    background-color: #b9b9b9;
+}
+form[name=authForm] button[disabled]:hover {
+    background-color: #b9b9b9;
+}
+
+/* ------------------- Admin Header ------------------ */
+header {
+    background-color: #f0f0f0;
+    padding: 1rem 0;
+}
+header .logo {
+    font-weight: 700;
+    font-size: 1.4rem;
+}
+header .logo .btn {
+    color: #000;
+}
+header .logo .btn:hover {
+    background-color: #f0f0f0;
+    cursor: inherit;
+}
+header .nav .btn {
+    background-color: #adadad;
+    color: #fff;
+}
+header .nav .btn-active {
+    background: #117ed6;
+}
+
+/* ----------------- Orders & Products --------------- */
+#orders, #products {
+    padding: 3rem 0;
+}
+#orders .btn, #products .btn {
+    font-weight: 400;
+    font-size: 1.2rem;
+    background: #3c7aab;
+    color: #fff;
+    height: 2.2rem;
+    line-height: 2.2rem;
+    padding: 0 1rem;
+    text-transform: none;
+}
+table tr.danger {
+    background-color: #fde8e8;
+}
